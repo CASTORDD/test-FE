@@ -1,0 +1,64 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)  {
+
+body {
+	font-size: 14px;
+}
+header h2 {
+    font-size: 24px;
+}
+header h2 span{
+    font-size: 30px;
+}
+aside {
+	line-height: 20px;
+}
+nav {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+.car {
+	&__display {
+		max-height: 224px;
+	}
+	&__display img {
+		min-height: 224px;
+	}
+	&__data * {
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	cars-list {
+		grid-template-columns: 30% 70%;
+		grid-template-rows: 101px 55px auto;
+
+		header {
+			
+		}
+
+		aside {
+		}
+		nav {
+			flex: 70%;
+		}
+
+	}
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
