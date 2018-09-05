@@ -39,19 +39,29 @@ nav {
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) {
 	cars-list {
+		display: grid;
 		grid-template-columns: 30% 70%;
 		grid-template-rows: 101px 55px auto;
 
 		header {
-			
+			grid-area: 1 / 1 / auto / span 2 ;
 		}
 
 		aside {
+			grid-area: 2 / 1 / 650 ;
+			min-height: 650px;
+			max-height: calc(100vh - -226px);
 		}
 		nav {
-			flex: 70%;
+			grid-area: 2 / 2;
+		}
+		section {
+			grid-area: 3 / 2;
+			&.car__list{
+				padding: 15px;
+			}
 		}
 
 	}
@@ -60,5 +70,28 @@ nav {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+	.container-fluid {
+		max-width: 1200px;
+		position:relative;
+	}
+	cars-list {
+		grid-template-columns: 20.2% 79.8%;
+		grid-column-gap: 40px;
+		header {
+			grid-area: 1 / 2 / auto / span 2 ;
+		}
+
+		aside {
+			grid-area: 1 / 1 / 650 ;
+		}
+		section {
+			grid-area: 3 / 2;
+			&.car__list{
+				padding: 15px 0;
+			}
+		}
+
+	}
+
 
 }
